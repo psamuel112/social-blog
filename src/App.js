@@ -3,6 +3,7 @@ import "./App.css";
 import "./style.scss";
 import "./media-query.css";
 import Home from "./pages/Home";
+import ForgotPassword from "./pages/ForgotPassword";
 import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -84,11 +85,18 @@ function App() {
         />
         <Route path="/blogs" element={<Blogs setActive={setActive} />} />
         <Route path="/tag/:tag" element={<TagBlog setActive={setActive} />} />
-        <Route path="/category/:category" element={<CategoryBlog setActive={setActive}  />} />
+        <Route
+          path="/category/:category"
+          element={<CategoryBlog setActive={setActive} />}
+        />
         <Route path="/about" element={<About />} />
         <Route
           path="/auth"
           element={<Auth setActive={setActive} setUser={setUser} />}
+        />
+        <Route
+          path="/ForgotPassword"
+          element={<ForgotPassword  />}
         />
         <Route path="*" element={<NotFound />} />
       </Routes>
